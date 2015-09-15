@@ -12,7 +12,7 @@ int main()
   printf("|%-66s|\n","Player information");
   printf("|%-.66s|\n",frame);											    printf("|%-19s|%-46s|\n",l0,r0);
   printf("|%-.19s|%-.46s|\n",frame,frame);
-  printf("|%-19s|%-2d/%-2d/%-9d|%-19s|%-5g%-5c|\n",l1,07,10,1982,r1,1.71,'m');
+  printf("|%-19s|%-.2d/%-.2d/%-9d|%-19s|%-5g%-5c|\n",l1,07,10,1982,r1,1.71,'m');
   printf("|%-.19s|%-.15s|%-.19s|%-.10s|\n",frame,frame,frame,frame);
   printf("|%-19s|%-15d|%-19s|%-3d%-7s|\n",l2,32,r2,65,"kg");
   printf("|%-.19s|%-.15s|%-.19s|%-.10s|\n",frame,frame,frame,frame);
