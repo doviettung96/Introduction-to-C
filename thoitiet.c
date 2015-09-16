@@ -5,7 +5,7 @@ int main()
   char local[] = "Nhan Ly";
   char country[] = "Vietnam";
   char frame[] = "_______________________________________________________";
-  printf("%-s, %-s %-s\n\n",local,country,"Weather");
+  printf("\n%-s, %-s %-s\n\n",local,country,"Weather");
   printf("_______________________________________________________%n\n",&dodai);
   printf("|%-8s%-5s%-5s%-5s%-13s%-7s%-10s|\n","DAY","COND","HIGH","LOW","DESCRIPTION","PRECIP","WIND");
   printf("|%.53s|\n",frame);
