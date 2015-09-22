@@ -6,7 +6,7 @@ main ()
   char frame[] = "______________________________________________________________";
   int Quantity;
   float Price, Total, VAT, Pay;
-  char ISBN[7], Title[20]; 
+  char ISBN[7], Title[25]; 
   printf("Quantity: ?\n"); scanf("%6d",&Quantity);
   printf("ISBN: ?\n"); scanf("%7s",ISBN);
   printf("Title: ?\n"); scanf(" %[^\n]",Title);
