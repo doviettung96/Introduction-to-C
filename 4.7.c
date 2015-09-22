@@ -11,7 +11,7 @@ main ()
   printf("ISBN: ?\n"); scanf("%7s",ISBN);
   printf("Title: ?\n"); scanf(" %[^\n]",Title);
   printf("Price= ?\n"); scanf("%8f",&Price);
-  VAT = (4 /(float) 100);
+  VAT = (4.0 / 100.0);
   Total = Price*Quantity;
   Pay = Total*(1 + VAT);
   printf("\n%s\n",frame);
