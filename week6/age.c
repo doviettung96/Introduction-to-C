@@ -12,19 +12,20 @@ main ()
   }
   if(p<=0)
     printf("Sadly, no one buy ticket!\n");
-   else if(p==3)
-     {
-  printf("Age of No 3: ?\n");
-  scanf("%d",&a[3]);
-  if(a[3]<=0)
+
+  if(p>0)
+    {
+  printf("Age of No 1: ?\n");
+  scanf("%d",&a[1]);
+  if(a[1]<=0)
     printf("Wrong. Type again!\n");
-  else if(a[3]<18)
+  else if(a[1]<18)
       young++;
-    else if(a[3]>=65)
-      old++;
+    else if(a[1]>=65)
+       old++;
     else
-      adult++;
-     }
+     adult++;
+    }
   if(p>1)
     {
   printf("Age of No 2: ?\n");
@@ -38,36 +39,32 @@ main ()
     else
        adult++;
     }
-    if(p>0)
-    {
-  printf("Age of No 1: ?\n");
-  scanf("%d",&a[1]);
-  if(a[1]<=0)
+    
+    if(p==3)
+     {
+  printf("Age of No 3: ?\n");
+  scanf("%d",&a[3]);
+  if(a[3]<=0)
     printf("Wrong. Type again!\n");
-  else if(a[1]<18)
+  else if(a[3]<18)
       young++;
-    else if(a[1]>=65)
-       old++;
+    else if(a[3]>=65)
+      old++;
     else
-     adult++;
-    }
+      adult++;
+     }
+    
   if(p>0)
   {
     printf("\nGALAXY CINEMA BILLING\n");
     printf("Number of persons: %d\n",p);
+    if(p<2)
+      printf("Age of No 1: %d\n",a[1]);
+    if(p>=2)
+      printf("Age of No 2: %d\n",a[2]);
     if(p==3)
-      {
-      printf("Age of No 1: %d\n",a[1]);
-      printf("Age of No 2: %d\n",a[2]);
       printf("Age of No 3: %d\n",a[3]);
-      }
-    else if(p>=2)
-      {
-	printf("Age of No 1: %d\n",a[1]);
-      printf("Age of No 2: %d\n",a[2]);
-      }
-    else
-      printf("Age of No 1: %d\n",a[1]);
+   
   printf("Title of movie: %s\n",title);
   if(weekday<=0 || weekday>8)
     printf("Wrong. Type again!\n");
