@@ -7,7 +7,7 @@ main ()
   young = 0; adult = 0; old =0;
   {
   printf("Number of persons: ?\n"); scanf("%d",&p);
-  printf("Title of movie: ?\n"); scanf("%s",title);
+  printf("Title of movie: ?\n"); scanf(" %[^\n]",title);
   printf("Type the day of the week(example: 2 = Monday\n"); scanf("%d",&weekday);
   }
   if(p<=0)
