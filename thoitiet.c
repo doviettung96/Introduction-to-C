@@ -1,27 +1,22 @@
 #include <stdio.h>
 int main()
 {
-  int dodai;
-  char local[] = "Nhan Ly";
-  char country[] = "Vietnam";
-  char frame[] = "_______________________________________________________";
-  printf("\n%-s, %-s %-s\n\n",local,country,"Weather");
-  printf("_______________________________________________________%n\n",&dodai);
-  printf("|%-8s%-5s%-5s%-5s%-13s%-7s%-10s|\n","DAY","COND","HIGH","LOW","DESCRIPTION","PRECIP","WIND");
-  printf("|%.53s|\n",frame);
-  printf("|%-8s%-5s%-2d%-1c%-2c%-2d%-1c%-2c%-13s%3d%-4c%-4s%2d%-4s|\n","FRI","@@",83,'\'','F',76,'\'','F',"Thunderstorms",90,'%',"ENE",6,"mph");
-         printf("|%-4s%-4d%-5s%41c\n","Sep",18,"@@",'|');
-	 printf("|%.53s|\n",frame);
-  printf("|%-8s%-5s%-2d%-1c%-2c%-2d%-1c%-2c%-13s%3d%-4c%-4s%2d%-4s|\n","SAT","@@",88,'\'','F',77,'\'','F',"Thunderstorms",60,'%',"SE",7,"mph");
-	 printf("|%-4s%-4d%-5s%41c\n","Sep",19,"@@",'|');
-	 printf("|%.53s|\n",frame);
-  printf("|%-8s%-5s%-2d%-1c%-2c%-2d%-1c%-2c%-13s%3d%-4c%-4s%2d%-4s|\n","SON","@@",92,'\'','F',78,'\'','F',"Thunderstorms",80,'%',"SE",5,"mph");
-	 printf("|%-4s%-4d%-5s%41c\n","Sep",20,"@@",'|');
-	 printf("|%.53s|\n",frame);
-  printf("|%-8s%-5s%-2d%-1c%-2c%-2d%-1c%-2c%-13s%3d%-4c%-4s%2d%-4s|\n","MON","@@",90,'\'','F',78,'\'','F',"Thunderstorms",80,'%',"ESE",6,"mph");	 
-	 printf("|%-4s%-4d%-5s%41c\n","Sep",21,"@@",'|');
-	 printf("|%.53s|\n",frame);
-  printf("|%-8s%-5s%-2d%-1c%-2c%-2d%-1c%-2c%-13s%3d%-4c%-4s%2d%-4s|\n","TUE","@@",88,'\'','F',78,'\'','F',"Thunderstorms",80,'%',"SE",7,"mph");
-	 printf("|%-4s%-4d%-5s%41c\n","Sep",22,"@@",'|');
-	 printf("|%.53s|\n",frame);
-}
+  int rainy,tem,hum;
+  printf(" Does it rain? (1=yes,0=no)\n"); scanf("%d",&rainy);
+  printf(" Type the temperature: ?C\n"); scanf("%d",&tem);
+  printf(" Type the humidity: ?%%\n"); scanf("%d",&hum);
+  printf(" Now we have some information\n");
+  printf("\n %-15s\n","Forecast");
+  printf(" %-15s%-10s%-16s%-10s\n","Day","Rainy?","Temperature (C)","Humidity %");
+  if(rainy==0)
+    printf(" %-15s%-10s%-16d%-10d\n","Tomorrow","Not rainy",tem,hum);
+  else
+     printf(" %-15s%-10s%-16d%-10d\n","Tomorrow","Rainy",tem,hum);
+  if(tem>=35 && hum>=67)
+    printf(" You should rest at home\n");
+  else
+    if(tem>=20 && tem<=30 && hum>=32 && hum<=40 && rainy==0)
+  printf(" Let's go out for photography\n");
+      else
+    printf(" Don't forget to bring an umbrella!\n");
+    }
