@@ -1,9 +1,0 @@
-#include <stdio.h>
-main()
-{
-  float lai;
-  int tien;
-  char ten[100];
-  printf("So phan tram lai: \n"); scanf("%f",&lai);
-  printf("Ten: \n"); scanf("%s",&ten);
-  printf("So tien gui: \n"); scanf("%d",&tien);
