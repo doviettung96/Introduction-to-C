@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <math.h>
+#define ignore () {                  \
+int ch;                      \
+while((ch=getchat())&&ch!='\n'&&ch!=EOF); \
+}
+main(){
+  char choice;
+  float x,saiso;
+  do{
+    printf("MENU\n");
+    printf("Your choice?\n");
+    printf("Type (T)\n");
+    printf("SIN X (S)\n");
+    printf("SQUARE ROOT (R)\n");
+    printf("E^X (E)\n");
+    printf("QUIT (Q)\n");
+    switch (choice=getchar()) {
+    case 'T':printf("Type in a positive real number:"); scanf("%f",&x); ignore()
+      if(x<0){
+        printf("Wrong.Type again\n");
+        break;}
+      else {
+        printf("Type in deviation:"); scanf()
+        
+    }
+  }
+  while(choice != 'Q');
+}
