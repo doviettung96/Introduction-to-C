@@ -19,7 +19,7 @@ main(){
     case 1:do{
         printf("Type in a positive integer number (decimal):"); scanf("%d",&a);ignore();n=a;bin=0;
         if(a<=0)
-        printf("Wrong input. Type again!");
+        printf("Wrong input. Type again!\n");
       } while(a<=0);
       break;
     case 2:while(n>0){
