@@ -39,7 +39,7 @@ main()
   printf("Tong lai: %d\n",tonglai);
   laisuatnam=tonglai/(float)tien;
     break;
-    case 3:laisuatnam=printf("Lai suat nam: %.2f%%\n\n",laisuatnam*100);break;
+    case 3:printf("Lai suat nam: %.2f%%\n\n",laisuatnam*100);break;
     case 4:break;
     default:printf("Wrong choice.Type again!\n\n"); break;
     }
