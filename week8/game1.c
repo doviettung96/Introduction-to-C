@@ -18,10 +18,18 @@ int main(){
     switch(i%2){
     case 0:printf("P1's turn\n");do{
     printf("Choose a number:"); scanf("%d",&b); ignore(); printf("%d\n",b);
+    if(b<=0||b>5)
+    printf("Invalid input. Please retype!\n");
+    else if((b-c)%2==0&&c!=0)
+    printf("Foul!Retype.");
       } while(b<=0||b>5||((b-c)%2==0&&c!=0)); a+=b;i++;
     printf("Now the value is: %d\n",a); break;
     case 1:printf("P2's turn\n");do{
     printf("Choose a number:"); scanf("%d",&c); ignore(); printf("%d\n",c);
+     if(c<=0||c>5)
+    printf("Invalid input. Please retype!\n");
+    else if((b-c)%2==0&&b!=0)
+    printf("Foul!Retype.");
     } while(c<=0||c>5||((b-c)%2==0&&b!=0)); a+=c;i++;
     printf("Now the value is: %d\n",a); break;
       }
