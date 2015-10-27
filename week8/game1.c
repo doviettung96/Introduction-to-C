@@ -10,7 +10,11 @@ int main(){
   int goal,start,i,a,b,c;
   printf("ICT GAME CENTER - SMART STRATEGY\n");
   printf("Start:"); scanf("%d",&start); ignore(); printf("%d\n",start);
+  do{
   printf("Goal:"); scanf("%d",&goal); ignore(); printf("%d\n",goal);
+  if(goal<=start)
+    printf("Invalid. Destination can not be smaller than start.\n");
+  } while(goal<=start);
   srand(time(NULL));
   i=rand()%2; a=start;
   printf("Who plays first (randomly): P%d\n",i==0?1:2);
