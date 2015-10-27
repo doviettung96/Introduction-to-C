@@ -21,7 +21,7 @@ int main(){
     if(b<=0||b>5)
     printf("Invalid input. Please retype!\n");
     else if((b-c)%2==0&&c!=0)
-    printf("Foul!Retype.");
+    printf("Foul! Retype\n");
       } while(b<=0||b>5||((b-c)%2==0&&c!=0)); a+=b;i++;
     printf("Now the value is: %d\n",a); break;
     case 1:printf("P2's turn\n");do{
@@ -29,7 +29,7 @@ int main(){
      if(c<=0||c>5)
     printf("Invalid input. Please retype!\n");
     else if((b-c)%2==0&&b!=0)
-    printf("Foul!Retype.");
+    printf("Foul! Retype\n");
     } while(c<=0||c>5||((b-c)%2==0&&b!=0)); a+=c;i++;
     printf("Now the value is: %d\n",a); break;
       }

@@ -19,10 +19,9 @@ main(){
     choice=getchar(); ignore();
     switch (choice){
     case 'T':do{ printf("Type in a positive real number:"); scanf("%lf",&x); ignore();
-      if(x<0){
+      if(x<0)
         printf("Wrong.Type again\n");
       } while(x<0);
-        break;}
         printf("Type in deviation:"); scanf("%lf",&saiso); ignore();
       sin=x-1/6.0*x*x*x*(1-1/20.0*x*x+1/840.0*x*x*x*x);
       e=1+x*(1+1/2.0*x*(1+1/3.0*x*(1+1/4.0*x*(1+1/5.0*x*(1+1/6.0*x*(1+1/7.0*x))))));
