@@ -24,9 +24,9 @@ main(){
       break;
     case 2:while(n>0){
         bin=bin*10+n%2;
-        n=0.5*n;
+        n=n/2;
       }
-      printf("%d is %ld in binary\n\n",a,bin);
+      printf("%d is %ld in binary\n\n",a,a%2!=0?bin:10*bin);
       break;
     case 3:printf("%d is %x in hexadecimal\n\n",a,a);break;
     case 4:printf("%d is %o in octaldecimal\n\n",a,a);break;
