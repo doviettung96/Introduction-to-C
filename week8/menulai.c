@@ -18,9 +18,14 @@ main()
   scanf("%d",&select); ignore();
     switch (select){
     case 1:printf("Tai khoan khach hang:"); scanf("%[^\n]",ten); ignore();
+    do {
       printf("So tien gui:"); scanf("%d",&tien); ignore();
-      printf("Lai suat mot thang (%%):"); scanf("%f",&lai);ignore();                printf("So thang gui: "); scanf("%d",&thang); ignore();
+      printf("Lai suat mot thang (%%):"); scanf("%f",&lai);ignore();
+      printf("So thang gui: "); scanf("%d",&thang); ignore();
+      if(tien<=0||thang<=0)
+      printf("Invalid input. Type again!");
       printf("\n\n");
+    } while(tien<=0||thang||0);
       break;
     case 3:printf("%-6s%-15s%-10s%-15s\n","Thang","Tien dau ky","Tien lai","So du");
   sodu=tien; tonglai=0;
