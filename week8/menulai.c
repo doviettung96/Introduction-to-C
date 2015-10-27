@@ -12,8 +12,8 @@ main()
   printf("TAI KHOAN TIEN GUI ACB: \n");
   printf("Your choice?\n");
   printf("1. Gui tien va thoi han\n");
-  printf("2. Lai suat nam\n");
-  printf("3. Chi tiet lai suat(thong ke)\n");
+  printf("2. Chi tiet lai suat(thong ke)\n");
+  printf("3. Lai suat nam\n");
   printf("4. Thoat\n");
   scanf("%d",&select); ignore();
     switch (select){
@@ -25,9 +25,9 @@ main()
       if(tien<=0||thang<=0)
       printf("Invalid input. Type again!");
       printf("\n\n");
-    } while(tien<=0||thang||0);
+    } while(tien<=0||thang<=0);
       break;
-    case 3:printf("%-6s%-15s%-10s%-15s\n","Thang","Tien dau ky","Tien lai","So du");
+    case 2:printf("%-6s%-15s%-10s%-15s\n","Thang","Tien dau ky","Tien lai","So du");
   sodu=tien; tonglai=0;
   for(i=1;i<=thang;i++)
     {
@@ -39,7 +39,7 @@ main()
   printf("Tong lai: %d\n",tonglai);
   laisuatnam=tonglai/(float)tien;
     break;
-    case 2:laisuatnam=printf("Lai suat nam: %.2f%%\n\n",laisuatnam*100);break;
+    case 3:laisuatnam=printf("Lai suat nam: %.2f%%\n\n",laisuatnam*100);break;
     case 4:break;
     default:printf("Wrong choice.Type again!\n\n"); break;
     }
