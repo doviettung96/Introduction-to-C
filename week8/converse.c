@@ -4,8 +4,8 @@ int ch;                       \
 while((ch = getchar())&&ch!='\n'&&ch!=EOF); \
 }
 main(){
-  int choice,a,n;
-  long bin;
+  int choice,a,n,m;
+  long bin,oc;
   do{
     printf("Program conversing the type of number:\n");
     printf("by Do Viet Tung\n");
@@ -17,7 +17,7 @@ main(){
     printf("You choice?"); scanf("%d",&choice); ignore();
     switch (choice) {
     case 1:do{
-        printf("Type in a positive integer number (decimal):"); scanf("%d",&a);ignore();n=a;bin=0;
+        printf("Type in a positive integer number (decimal):"); scanf("%d",&a);ignore();n=a;m=a;bin=0;oc=0;
         if(a<=0)
         printf("Wrong input. Type again!\n");
       } while(a<=0);
@@ -29,7 +29,12 @@ main(){
       printf("%d is %ld in binary\n\n",a,a%2!=0?bin:10*bin);
       break;
     case 3:printf("%d is %x in hexadecimal\n\n",a,a);break;
-    case 4:printf("%d is %o in octaldecimal\n\n",a,a);break;
+     case 4:while(m>0){
+        oc=oc*10+m%2;
+        m=m/8;
+      }
+      printf("%d is %ld in binary\n\n",a,a%2!=0?bin:10*bin);
+      break;
     case 5:break;
     default:printf("Wrong choice!");break;
     }

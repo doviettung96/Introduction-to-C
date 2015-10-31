@@ -7,7 +7,8 @@ while((ch=getchar())&&ch!='\n'&&ch!=EOF); \
 }
 main(){
   char choice;
-  double x,square,saiso,e,sin;
+  double x,square,saiso,c=1.0;d=1.0;e=1.0,sin=0;
+  int i,j,n;
   do{
     printf("MENU\n");
     printf("Your choice?\n");
@@ -23,11 +24,18 @@ main(){
         printf("Wrong.Type again\n");
       } while(x<0);
         printf("Type in deviation:"); scanf("%lf",&saiso); ignore();
-      sin=x-1/6.0*x*x*x*(1-1/20.0*x*x+1/840.0*x*x*x*x);
-      e=1+x*(1+1/2.0*x*(1+1/3.0*x*(1+1/4.0*x*(1+1/5.0*x*(1+1/6.0*x*(1+1/7.0*x))))));
       break;
-    case 'S': printf("Sin(%lf)=%lf\n\n",x,sin);break;
-    case 'E':printf("Exp(x) = %lf\n\n",e);break;
+    case 'S':printf("Type in n"); scanf("%d",&n); ignore();
+      for(i=1,j=1;j<=n,i<=2n+1;i+=2,j++){
+        c*=x/i;
+        sin+=(j%2==1?c:-c);
+          }
+  printf("Sin(%lf)=%lf\n\n",x,sin);break;
+    case 'E':for(i=1,i<=n;i++){
+        d*=x/i;
+          e+=d;
+      }
+      printf("Exp(%lf) = %lf\n\n",x,e);break;
   case 'R':do{
       square = saiso;
       saiso= 0.5*(saiso+x/saiso);
