@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+void strcp(char *a, char *b, char *c);
+int main()
+{
+  int i,n,len;
+  char a[20];
+  char b[10];
+  char c[30];
+  printf("Type in the 1st sentence\n");
+  scanf("%s",a);
+  printf("Type in the 2nd sentence\n");
+  scanf("%s",b);
+  strcp(a,b,c);
+  for(i = 0; i < 30; ++i)
+    printf("%c",*(c + i));
+}
+
+void strcp(char *a, char *b, char *c){
+  int i = 0;
+  int m = 0;
+  int n;
+  while(*(a + i) != '\0'){
+    *(c + i) = *(a + i);
+    i++;
+  }
+  n = i + 1;
+  while(*(b + m) != '\0'){
+    *(c + n) = *(b + m);
+    m++;
+  }
+}

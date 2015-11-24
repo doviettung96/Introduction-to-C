@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+
+void left(char *a, int size);
+
+int main()
+{
+  int size;
+  printf("Type in the size of the string\n");
+  scanf("%d",&size);
+  char a[size + 1];
+  printf("Type in the string\n");
+  gets(a);
+  
+}
+
+void left(char *a, int size)
+{
+  int i;
+  for(i = 0; i < size - 1; ++i)
+    {
+      *(a + i) = *(a + i + 1);
+    }
+}

@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+#define n 15
+
+int trimleft(char *a, int size);
+int trimright(char *a, int size);
+void trimiddle(char *a, int size, int left, int right);
+
+int main()
+{
+  int left, right;
+  int i;
+  char a[n + 1];
+  printf("Type in the string\n");
+  scanf("%s",a);
+  left = trimleft(a, n);
+  right = trimright(a, n);
+  trimiddle(a, n, left, right);
+  for(i = left; i < n - right; ++i)
+    printf("%c",*(a + i));
+  printf("\n");
+  return 0;
+}
+
+int trimleft(char *a, int size)
+{
+  int i,j;
+  int left = 0;
+  for (i = 0; i < size; ++i){
+    if(!isspace(*(a + i)))
+      break;
+    left++;
+  }
+  return left;
+}
+
+int trimright(char *a, int size)
+{
+  int i,j;
+  int right = 0;
+  for (i = size -1 ; i >= 0; --i){
+    if(!isspace(*(a + i)))
+      break;
+    right++;
+  }
+  return right;
+}
+
+void trimiddle(char *a, int size, int left, int right)
+{
+  int i;
+  for(i = left; i < size - right; ++i){
+    if(isspace(*(a + i)) && isspace(*(a + i + 1))){
+      *(a + i) = '\0';
+    }
+  }
+}
