@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+  typedef struct {
+    char ans;
+    char corr;
+  } test;
+  test exam[5];
+
+  int i;
+  printf("The 1st question: \n");
+  printf("A. \nB. \nC. \n");
+  exam[0].corr = 'A';
+  printf("The 2nd question: \n");
+  printf("A. \nB. \nC. \n");
+  exam[1].corr = 'B';
+  printf("The 3rd question: \n");
+  printf("A. \nB. \nC. \n");
+  exam[2].corr = 'C';
+  printf("The 4th question: \n");
+  printf("A. \nB. \nC. \n");
+  exam[3].corr = 'A';
+  printf("The 5th question: \n");
+  printf("A. \nB. \nC. \n");
+  exam[4].corr = 'B';
+  
+}

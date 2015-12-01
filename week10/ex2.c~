@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <math.h>
+void prime(int n);
+void main(){
+  int n;
+  printf("Type in number n\n"); scanf("%d",&n);
+  prime(n);
+}
+void prime(int n){
+  int i,j;
+    printf("All the prime numbers from 2 to %d:\n",n);
+    for(j=2;j<=n;j++){
+  for(i=2;i<=sqrt(j);i++){
+    if(j%i==0)
+   break;
+      printf("%d\n",j);
+  }
+    }
+}

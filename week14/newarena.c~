@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+
+int main()
+{
+  typedef struct {
+    float str,agi,hp;
+  } attributes;
+  attributes fighter[3];
+  
+}
+
+void i

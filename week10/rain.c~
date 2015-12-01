@@ -1,0 +1,12 @@
+#include <stdio.h>
+#define size 12;
+int main(){
+  int a[size],i;
+  for(i=0;i<size;++i){
+    printf("Type in the rain fall of month %d-th\n",i+1);
+    scanf("%d",a[i]);
+  }
+    printf("%7s%15s","Month","Rainfall (in mm)");
+    for(i=0;i<size;++i)
+      printf("%7d%15d",i+1,a[i]);
+}
