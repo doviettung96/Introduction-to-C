@@ -60,7 +60,7 @@ int main()
 	}while(vdv[j].diem[i] < 0 || vdv[j].diem[i] > 10);
 	}
       
-      printf("%-30s %4d%4d%4d%4d%4d\n","Ho ten",1,2,3,4,5);
+      printf("\n%-30s %4d%4d%4d%4d%4d\n","Ho ten",1,2,3,4,5);
       
       for(j = 0; j < so; ++j)
 	  printf("%-30s %4d%4d%4d%4d%4d\n",vdv[j].hoten,vdv[j].diem[0],vdv[j].diem[1],vdv[j].diem[2],vdv[j].diem[3],vdv[j].diem[4]);
@@ -88,7 +88,7 @@ int main()
     }
 
       
-    printf("%-30s %8s %6s\n","Ho ten","Rank","Score");
+    printf("\n%-30s %8s %6s\n","Ho ten","Rank","Score");
     printf("%-30s %8s %6d\n",vdv[0].hoten,"Gold",tong[0]);
     printf("%-30s %8s %6d\n",vdv[1].hoten,"Silver",tong[1]);
     printf("%-30s %8s %6d\n",vdv[so - 1].hoten,"Worse",tong[so - 1]);
@@ -99,12 +99,12 @@ int main()
 	for(i = 0; i < 5; ++i){
 	  if(vdv[j].diem[i] == 10 && vdv[j].diem[i + 1] == 10 && vdv[j].diem[i + 2] == 10 )
 	    {
-	    printf("Van dong vien so %d, %-30s la 1 sieu xa tien\n",j + 1, vdv[j].hoten);
+	    printf("\nVan dong vien so %d, %-30s la 1 sieu xa tien\n",j + 1, vdv[j].hoten);
 	  sieuxatien += 1;
 	    }
 	}
       if(sieuxatien == 0)
-	printf("Khong co sieu xa tien\n");
+	printf("\nKhong co sieu xa tien\n");
       break;
 
   case 5: break;
