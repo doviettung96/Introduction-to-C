@@ -5,9 +5,12 @@ void trimleft(char *a);
 void trimright(char *a);
 void trimmiddle(char *a);
 void search(char a[][30],char *b);
+void replace(char *a, char b, char c);
 int main()
 {
   char lookup[30];
+  char str[30];
+  char r_what, r_with;
   char prods[5][30] = {"TV127  31 inch Television",
 	                     "CD057  CD Player",
 	                     "TA877  Answering Machine",
@@ -19,7 +22,26 @@ int main()
   trimright(lookup);
   trimmiddle(lookup);
   search(prods,lookup);
-  
+  while(getchar() != '\n');
+  printf("Type in a string of letters\n");
+  scanf("%s",str);
+  while(getchar() != '\n');
+  printf("Which letter do you want to replace?\n");
+  scanf( "%c",&r_what);
+  printf("Replace with?\n");
+  while(getchar() != '\n');
+  scanf( "%c",&r_with);
+  replace(str, r_what, r_with);
+  printf("Final string: %s\n",str);
+  return 0;
+}
+
+void replace(char *a, char b, char c){
+  int i;
+  for(i = 0; i < strlen(a); ++i){
+    if(*(a + i) == b)
+      *(a + i) = c;
+  }
 }
 
 void search(char a[][30], char *b){
