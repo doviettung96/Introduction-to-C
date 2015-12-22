@@ -27,10 +27,12 @@ int main()
     case 1: do {
 	printf("Nhap so van dong vien\n"); 
 	scanf("%d",&so);
-	while(getchar() != '\n');
+    
 	if(so < 0 || so > 8)
 	  printf("Nhap sai so vdv. Nhap lai\n");
       } while( so < 0 || so >  8);
+      
+      while(getchar() != '\n');
       for(i = 0; i < so; ++i){
 	printf("Nhap ho ten cho vdv so %d\n", i + 1);
 	do {
@@ -76,7 +78,7 @@ int main()
       for(j = 0; j < 5; ++j)
         tong[i] += vdv[i].diem[j];
     for( i = 0; i < so - 1; ++i)
-      for( j = 1; j < so; ++j)
+      for( j = i; j < so; ++j)
         if(tong[i] < tong[j])
       {
         tmp = vdv[i];
