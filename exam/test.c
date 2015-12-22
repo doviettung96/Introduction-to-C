@@ -123,8 +123,8 @@ void trimleft(char *a){
 
 void trimright(char *a){
   int i;
-  while(*(a + strlen(a)) == ' ')
-    *(a + strlen(a)) = *(a + strlen(a) + 1 );
+  while(*(a + strlen(a) - 1) == ' ')
+    *(a + strlen(a) - 1) = '\0';
 }
 
 void trimmiddle(char *a){
